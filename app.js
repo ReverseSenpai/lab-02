@@ -30,3 +30,8 @@ if (height.trim().toLowerCase() == 'yes'){
 }else{
   alert('You know nothing')
 }
+if (okonomiyaki== 'yes' &league=='yes'&bone=='no'&anime=='yes'&height=='yes'){
+  alert('Wow you really know me!');
+}else{
+  alert('Since you dont know that much about me heres some info :D');
+}
