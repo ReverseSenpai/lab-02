@@ -40,3 +40,9 @@ if (okonomiyaki== 'yes' &league=='yes'&bone=='no'&anime=='yes'&height=='yes'){
 }else{
   alert('Since you dont know that much about me heres some info :D');
 }
+
+function checkAnswer (){
+  var okonomiyaki = prompt('Do you think I like okonomiyaki');
+  return okonomiyaki;
+}
+checkAnswer();
