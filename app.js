@@ -2,6 +2,8 @@
 
 var correctNumber =13;
 var notDone = true;
+var places = ["Paris","Scotland","Ireland","Italy"];
+var done = false;
 
 var guess;
 for (var guesses=4; guesses > 0 && notDone; guesses--) {
@@ -10,8 +12,6 @@ for (var guesses=4; guesses > 0 && notDone; guesses--) {
   if (guess === correctNumber) {
     notDone = false;
     alert('Correct!');
-  } else if (guesses === 1 ){
-    alert ('you are out of guesses')
   } else if (guess > 13){
     alert ('too high guess again');
   } else if (guess < 13){
@@ -19,14 +19,32 @@ for (var guesses=4; guesses > 0 && notDone; guesses--) {
   }
 
 }
-// var videoGames = ['Kingdom Hearts', 'League of Legends', 'Dark Souls', 'Fallout New Vegas']
-// var guess;
-// for (guesses=6; guesses > 0 && notDone; guesses--) {
-//   guess = prompt('Guess some of my favorite videogames. 6 chances this time?');
-//   if (guess === 'Kingdom Hearts' ) {
-//     notDone = false;
-//     alert('Correct!');
-//   }
+var done = false
+var guess;
+for (var guesses = 6; guesses > 0 && !done; guesses--) {
+  guess = prompt('Guess what countries that I have visited?. 6 chances this time');
+  for (var i=0; i<places.length; i++) {
+    if (guess === places[i]) {
+        done= true;
+        alert('Correct. I have visited; Ireland, Italy. Scotland, and Paris.');
+      } else if (i === places.length-1  && !done && guesses === 1) {
+        alert('Unlucky. I have been to; Ireland, Italy, Scotland. and Paris.')
+      } else if (i === places.length-1  && !done) {
+        alert('guess again')
+      }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 // var okonomiyaki = prompt('Do you think i like okonomiyaki?');
 // if (okonomiyaki.trim().toLowerCase() == 'yes'){
 //   alert('You are correct');
